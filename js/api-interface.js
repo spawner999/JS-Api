@@ -12,13 +12,31 @@ $(document).ready(function(){
         response.city.name,
         current.dt_txt,
         current.main.temp,
-        current.weather[0].main,
-        current.clouds.all + "% cloud cover"
+        current.weather[0].description
       );
-      console.log(forecast);
+      $('.gallery').append(createCard(forecast));
     }
-    console.log(response);
+    $('.forecast').click(function(){
+      var current = $(this);
+    $(current).find('.card').addClass('flipped')
+    .mouseleave(function(){
+        $(current).find('.card').removeClass('flipped');
+    });
+    return false;
+});
   });
 
   });
 });
+
+
+function createCard(forecast){
+  var card = '<div class="forecast"><div class="card"><div class="face front"><h1>%city%</h1><h3>%date%</h3><h3>%description%</h3></div><div class="face back"><h2>C :%celsius%</h2><h2>F: %fahr%</h2></div></div></div>';
+
+  var current = card.replace('%city%', forecast.city)
+    .replace('%date%', forecast.date)
+    .replace('%description%', forecast.description)
+    .replace('%celsius%', forecast.celsius)
+    .replace('%fahr%', forecast.fahr);
+  return current;
+  }
