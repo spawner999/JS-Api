@@ -9,8 +9,8 @@ body {
 // CARD FLIPPING
 
   .forecast {
-    lost-column: 1/8 8 1em;
-    height: 200px;
+    lost-column: 1/4 4 1em;
+    height: 300px;
     margin-bottom: 1em;
     -webkit-perspective: 800;
     position: relative;
@@ -45,4 +45,16 @@ body {
     background: white;
     color: lightblue;
     cursor: pointer;
+}
+
+//GALLERY
+
+.column{
+  lost-column: 1/2;
+  padding: 1px;
+}
+
+.1, .2{
+  lost-column: 1/1;
+  height: auto;
 }

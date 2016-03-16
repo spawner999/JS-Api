@@ -6,8 +6,8 @@ body {
   box-sizing: border-box; }
 
 .forecast {
-  width: calc(99.99% * 1/8 - (1em - 1em * 1/8));
-  height: 200px;
+  width: calc(99.99% * 1/4 - (1em - 1em * 1/4));
+  height: 300px;
   margin-bottom: 1em;
   -webkit-perspective: 800;
   position: relative; }
@@ -20,11 +20,11 @@ body {
 .forecast:last-child {
   margin-right: 0; }
 
-.forecast:nth-child(8n) {
+.forecast:nth-child(4n) {
   margin-right: 0;
   float: right; }
 
-.forecast:nth-child(8n + 1) {
+.forecast:nth-child(4n + 1) {
   clear: left; }
 
 .card.flipped {
@@ -56,5 +56,43 @@ body {
   background: white;
   color: lightblue;
   cursor: pointer; }
+
+.column {
+  width: calc(99.99% * 1/2 - (30px - 30px * 1/2));
+  padding: 1px; }
+
+.column:nth-child(1n) {
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+
+.column:last-child {
+  margin-right: 0; }
+
+.column:nth-child(2n) {
+  margin-right: 0;
+  float: right; }
+
+.column:nth-child(2n + 1) {
+  clear: left; }
+
+.1, .2 {
+  width: calc(99.99% * 1/1 - (30px - 30px * 1/1));
+  height: auto; }
+
+.1:nth-child(1n), .2:nth-child(1n) {
+  float: left;
+  margin-right: 30px;
+  clear: none; }
+
+.1:last-child, .2:last-child {
+  margin-right: 0; }
+
+.1:nth-child(1n), .2:nth-child(1n) {
+  margin-right: 0;
+  float: right; }
+
+.1:nth-child(1n + 1), .2:nth-child(1n + 1) {
+  clear: left; }
 
 /*# sourceMappingURL=main.css.map */
